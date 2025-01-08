@@ -19,6 +19,10 @@ class TableMethods:
             table_name (str): The name of the table to create.
             columns (dict): A dictionary of column names and their SQL data types.
         """
+        if not columns:
+            raise Exception("Error creating table: No columns provided.")
+        if table_name == "" or table_name is None:
+            raise Exception("Error creating table: No table name provided.")
         try:
             # Build the column definitions from the provided dictionary
             column_definitions = ", ".join(f"{column_name} {data_type}" for column_name, data_type in columns.items())
@@ -47,6 +51,10 @@ class TableMethods:
             table_name (str): The name of the table to insert into.
             columns (dict): A dictionary of column names and their values to insert into the table for the row.
         """
+        if not columns:
+            raise Exception("Error inserting data: No data provided.")
+        if table_name == "" or table_name is None:
+            raise Exception("Error inserting data: No table name provided.")
         try:
             # Build the column names and placeholders for the query
             column_names = ", ".join(columns.keys())

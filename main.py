@@ -15,7 +15,7 @@ def main():
     columns = {
         "eventtimestamputc": "TEXT NOT NULL",
         "userid": "TEXT NOT NULL",
-        "eventname": "TEXT NOT NULL",
+        "eventname": "TEXT NOT NULL"
     }
     table_methods.create_table("events", columns)
 
