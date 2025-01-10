@@ -15,7 +15,7 @@ class DB:
         self.connector = db_connector.connect(*args, **kwargs)
         self.cursor = self.connector.cursor()
 
-    def execute(self, query, params=None):
+    def execute(self, query: str, params=None):
         """
         Execute a query against the database.
 
