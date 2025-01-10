@@ -26,7 +26,7 @@ def post_n_times_to_server(n=1000):
     """
     Send 'n' random events to the server in parallel using joblib.
     """
-    base_url = "https://ourapp-fucph9h2dpbbhacj.israelcentral-01.azurewebsites.net"
+    base_url = "https://noalirazapp-a8hqhjhsdpdehwfg.israelcentral-01.azurewebsites.net"
     endpoint = "/process_event"
     url = base_url + endpoint
 
